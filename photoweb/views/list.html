@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+</head>
+<body>
+<ol>
+    {{/*image是string切片*/}}
+    {{range $.images}}
+    {{/*表示当前当前元素以urlquery方式输出,表示对当前元的值进行 换以适合作为URL一部分,对当前元的值进行适合用于HTML显示的字符化*/}}
+<li><a href="/view?id={{.|urlquery}}">{{.|html}}</a></li>
+{{end}}
+    </ol>
+
+</body>
+</html>
